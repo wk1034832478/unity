@@ -1,0 +1,9 @@
+1. unity当中，是由游戏对象上添加的组件来操作游戏对象的，并使用C#编程语言
+2. 创建脚本: 创建脚本时，会初始化里面的内容，所以创建时，名字要确定！
+3. 设置unity编辑脚本的默认工具（默认为visual studio）： Unity > Preferences > External Tools
+4. 类名和文件名一致，才可以将脚本绑定到对象上（GameObject）
+5. 两个重点方法
+	Start 游戏开始前调用，进行初始化（第一次Update之前）
+	Update 每一帧进行更新时，调用
+6. Debug.Log(string msg), unity当中进行打印调试使用，内容会输出的unity控制台
+7. 脚本本身也是一种组件，可用过GetComponent<脚本名>()来获取脚本的实例;

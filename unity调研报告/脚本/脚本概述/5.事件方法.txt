@@ -1,0 +1,11 @@
+本文件介绍几种MonoBehaviour类重要的事件方法，比较全的在该链接中:https://docs.unity3d.com/ScriptReference/MonoBehaviour.html
+1. Update 在帧更新和动画计算之前调用
+2. FixedUpdate 会在每一次物理引擎计算的时候调用，通常把用户的输入操作接受操作放到这里
+3. LateUpdate 每一帧最后执行的方法
+4. 初始化方法
+	Start 第一帧或物理计算更新前调用
+	Awake 每一个对象在加载的时候调用（Start之前）
+5. OnGUI 周期性调用
+6. 物理事件
+	OnCollisioXX() // 物理事件
+	OnTriggerXX() // 对象设置了触发器Trigger时触发

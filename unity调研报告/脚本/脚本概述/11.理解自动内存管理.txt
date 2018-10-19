@@ -1,0 +1,2 @@
+Unity Engine会自动回收和释放不用的内存
+Totally study C#

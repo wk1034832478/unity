@@ -1,0 +1,16 @@
+协同程序：使用条件，耗时较长或需要渐变效果的程序代码块
+声明方式:
+IEnumerator Fade() 
+{
+    for (float f = 1f; f >= 0; f -= 0.1f) 
+    {
+        Color c = renderer.material.color;
+        c.a = f;
+        renderer.material.color = c;
+        yield return null; // 必须有让步返回 或 yield return new WaitForSeconds(.1f);
+    }
+}
+调用协同程序方法:
+	StartCoroutine("Fade");
+		或
+	StartCoroutine( Fade() );

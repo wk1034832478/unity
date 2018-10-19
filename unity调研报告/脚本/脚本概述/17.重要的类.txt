@@ -1,0 +1,4 @@
+这三个类应当是首先明白的内容！
+1. MonoBehaviour 所有游戏对象脚本的基类
+2. Transform Transform组件，控制着游戏对象的空间信息
+3. RigidBody 刚体组件，影响着物理引擎的计算

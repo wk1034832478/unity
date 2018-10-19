@@ -1,0 +1,11 @@
+代码当中可添加不同的预处理器来让代码进行部分编译以及为某个特定的平台
+进行编译
+所有自带的编译指令链接：https://docs.unity3d.com/Manual/PlatformDependentCompilation.html
+推荐常用：UNITY_EDITOR
+使用示例:
+void Update() {
+	#if UNITY_EDITOR 
+		Debug.Log( "现在处于用户编辑模式" );
+	#endif
+}
+也可自定义指令（symbol更准确）,上方的链接当中有

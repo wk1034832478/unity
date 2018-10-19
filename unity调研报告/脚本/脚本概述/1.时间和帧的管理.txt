@@ -1,0 +1,23 @@
+1. Update方法是在每一帧中执行一次，假如要在固定一秒钟改变一个量为20
+	代码可以这样写
+	tranform.Translate(0,0,distancePerFrame); // 每一帧改变
+	但是由于cpu的负载等各项原因，不可能在每秒钟都执行相同的帧的数量，意味着每秒钟都改变不同的量
+	所以，应该修改代码，设一秒钟改变量为distancePerFrame，那么每一帧应该改变的就是 
+	(两个帧之间时间ms / 1s ) * distancePerform
+	Time.deliaTime = 两个帧之间时间ms / 1s, 所以改变应该是这个样子
+	tranform.Translate(0,0,distancePerFrame * Time.deltaTime); 
+2. Fixed Timestep 固定的时间步伐
+	物理引擎的计算，是由该参数决定的，该值越小，计算就越频繁，可通过脚本 Time.fixedDeltaTime获取
+	，也可通过Time Manager来设置（5.x版本的默认值为0.02）,设置越小，对cpu的消耗也就更高
+3. Maximum Allowed Timestep 最大允许的时间步伐
+	当Update执行的时间超过 Maximum Allowed Timestep 时，物理引擎开始让步
+	帧处理有限处理，通常这样做有更好的游戏体验性，Maximum Allowed Timestep
+	可通过Time Manager进行设置
+4. Time Scale 时间放缩
+	当1时，脚本是按照正常时间来进行的，如果大于1，则是加快的，如果小于1，则是放慢的
+	。脚本中，可通过Time.timeScale 进行更改，不影响其他的脚本。也可通过Time Manager来
+	进行全局更改。注意：通过脚本更改的timeScale仅仅会影响该脚本中Update和FixedUpdate方法
+	执行的频率
+5. Capture Framerate 捕捉帧
+	如果要捕获帧画面，可通过设置 Time.captureFramerate 来避免对截屏游戏真实性的影响
+	设置该值之后，则帧更新的时间间隔为 1 / Time.captureFramerate

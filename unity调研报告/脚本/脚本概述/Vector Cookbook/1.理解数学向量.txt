@@ -1,0 +1,15 @@
+理解常用的数学向量
+1. 加法(Addition)
+2. 减法(Substraction)
+3. 用标量的乘和除一个向量（Scalar Multiplication and Division）
+4. 点积（Dot Product）a · b ,结果应当是一个向量
+	a·b = |a| * |b| * cos(a,b)
+	注意：使用点积通常会占用更少的CPU时间片，可用此来进行优化
+5. 交叉积（Cross Product），
+	方向使用左手定则（left hand rule ）
+		大拇指和食指处于同一个平面，大拇指指向第一个向量的方向
+		食指指向第二个向量的方向，结果向量方向垂直手心，大小是
+		两个向量各个值的积再乘以 sin(夹角)
+	注意：使用点积通常会占用更少的CPU时间片，可用此来进行优化
+
+

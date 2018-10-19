@@ -1,0 +1,3 @@
+1. 复制已经存在的对象(或者预制件 prefab )
+	Instantiate( gameObject );
+2. 销毁对象 Destroy( gameObject ) 或者 Destroy( gameObject, delay) // 延迟后进行销毁

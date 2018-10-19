@@ -1,0 +1,38 @@
+1. 场景首次加载时
+	a. Awake
+	b. OnEnable
+	c?. OnLevelWasLoaded: This function is executed to inform the game that a new level has been 
+	loaded.
+	注意：游戏途中添加的对象，将不会执行 Awake 和 Start方法
+2. 开始更新第一帧前 
+	Start
+3. 两帧之间
+	OnApplicationPause 在两帧之间进行调用
+5. 更新顺序
+	FixedUpdate: 每一帧可能会被多次调用，物理计算和更新会在FixedUpdate方法执行
+	之后立即执行（不需要在该方法当中使用Time.deltaTime）
+	Update 会在每一个帧当中进行调用
+	LateUpdate: Update计算执行之后进行调用，公共的使用是，跟随第三人称角色的镜头
+	确保人物转身完成后进行调用
+6. 渲染
+	OnPreCull 每一次摄像头采集之前调用
+	OnBecameVisible/OnBecameInvisible 游戏对象在对任何摄像头可见和不可见时调用
+	OnWillRenderObject  如果对象时可见的，仅对每个摄像头调用一次
+	OnPreRender 摄像机开始渲染之前调用
+	OnRenderObject 在所有常规的场景渲染完成之后
+	OnPostRender 在摄像头完成场景渲染之后
+	OnRenderImage 场景渲染完成后允许图片加工时处理
+	OnGUI 每一帧调用多次以响应GUI事件
+	OnDrawGizmos 用于绘制小玩意 在场景视图中 可视化的目的
+6. 协同进程（Coroutine）
+	一般的协同进程更新时在更新操作之后，会在遇到yield指令时暂定。下面是不同的使用方式：
+	a. yield 在下一帧所有更新方法执行完之后调用
+	b. yield WaitForSeconds 设定延迟时间，并在那个时间的帧的所有Update执行之后继续
+	c. yield WaitForFixedUpdate 在所有的FixedUpdate执行完之后继续
+	d. yield WWW 在一个因特网下载完成之后继续
+	e. yield StartCoroutine 协同进程链, 在MyFunc coroutine 第一次完成时调用
+7. 对象销毁的时候
+	OnDestroy 在所有对象存在的帧更新完之后执行，
+8. 当程序停止执行的时候，以下方法会在所有激活的对象中调用
+	OnApplicationQuit 用户要停止执行程序前执行
+	OnDisable 对象disabled 或 inactive 时执行

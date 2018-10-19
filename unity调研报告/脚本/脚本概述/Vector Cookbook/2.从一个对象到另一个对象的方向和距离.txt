@@ -1,0 +1,15 @@
+1. 计算两个对象的距离
+	一个对象的向量被另外一个对象的向量减去，得到就是该对象到另一个对象
+	的向量
+	// JS
+	// Gets a vector that points from the player's position to the target's.
+	var heading = target.position - player.position;
+2. 判断目标是否在距离之内
+	if (heading.sqrMagnitude < maxRange * maxRange) {
+	    // Target is within range.
+	}
+3. 获取水平方向的向量
+	// JS
+	var heading = target.position - player.position;
+	heading.y = 0;  // This is the overground heading.
+

@@ -1,0 +1,12 @@
+1. 一般每个游戏对象都会有一个默认的组件 Transform
+2. 每个组件就是一个类的实例
+3. 获取组件 GetComponent<组件名>(), 如果没有加入该组装件，则会返回null
+4. 脚本中访问其他对象
+	a. 创建public变量，通过inspector进行设置（或相关联）
+	b. 如果要访问其他GameObject的组件，可以直接创建public组件变量，
+	直接拖住目标游戏对象指定即可自动将目标的组件和变量相关联
+5.游戏对象的组件查找子对象上的组件
+	transform.Find( "Gun" );
+6. GameObject.Find( "对象名" );  // 获取其它游戏对象
+7. GameObject.FindWithTag( "Player" ); // 获取其它游戏对象
+8. GameObject.FindGameObjectsWithTag( "enemy" ); // 获取其它游戏对象
