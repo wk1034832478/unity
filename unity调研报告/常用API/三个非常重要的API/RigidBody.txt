@@ -1,0 +1,5 @@
+概述：
+	刚体，使用物理引擎模拟现实世界的物理状况，但是对象的大小，应当尽可能
+	和现实世界当中保持一致（不使用scale来放缩物体），引擎会原物体放缩后的1米
+	当做是真的一米，计算的时候会导致失去仿真效果（该问题成为：slow motion）
+API详情：https://docs.unity3d.com/ScriptReference/Rigidbody.html

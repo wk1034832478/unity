@@ -1,0 +1,3 @@
+使用了ReflectionProbe的Sphere，需要使用一种材质，这种材质需要调整参数
+	Metallic 金属的 含金属的（含金属量）
+	smoothness 光滑度

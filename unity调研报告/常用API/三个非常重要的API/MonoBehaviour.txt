@@ -1,0 +1,2 @@
+官方文档十分全面了
+https://docs.unity3d.com/ScriptReference/MonoBehaviour.html

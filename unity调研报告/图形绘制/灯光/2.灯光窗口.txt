@@ -1,0 +1,33 @@
+1. 打开灯光窗口设置
+	 Window > Rendering > Lighting Settings
+2. 灯光窗口设置的三个tab
+	a. Scene tabs: 对于整个场景的设置
+	b. Global maps: 显示由GI灯光处理而生成的所有贴图
+	c. Object maps: 显示由选择的对象经GI处理的纹理贴图
+
+	窗口下方有个复选框可选择是否自动生成，如果不选，可点击旁边
+	的按钮来进行烘焙（也可清除烘焙的缓存）
+3. Scene tab 场景标签页
+	相关部分：
+		Environment 环境
+		Realtime Lighting 实时灯光
+		Mixed Lighting 混合
+		Lightmapping Settings 灯光贴图设置
+		Other Settings 其他设置
+		Debug Settings 调试设置
+	a. Environment 环境设置
+		1) 天空盒材质
+		2) 选择一个光照是直的灯光来作为一个“仿真太阳”,默认为最亮的
+		直招灯光
+		3) 环境灯光：这些设置影响来自远距离的灯光
+		  A. 灯光源：颜色板，线性颜色，天空盒
+		  B. 光照强度倍数 0-8
+		4) 外界灯光模式：  
+			定义全球照明模式
+			real-time lighting and baked lighting 都激活时可用！
+		5. 实时时间(Realtime)：
+			如果希望要获得外界的灯并通过真实的时间来实时计算
+		6. Baked (烘焙)：
+			如果想要外界的灯光通过与计算在运行时放置到场景中
+		7. (Environment Reflections)环境反射：
+	

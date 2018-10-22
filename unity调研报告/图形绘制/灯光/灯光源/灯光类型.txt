@@ -1,0 +1,6 @@
+1. 点灯光
+2. 聚光灯 (Spot light)
+3. Directional lights
+4. 区域灯 Area lights(Baked Only)
+5. 发光材质 Emissive materials
+6. 周围灯光，环境光 Ambient light
