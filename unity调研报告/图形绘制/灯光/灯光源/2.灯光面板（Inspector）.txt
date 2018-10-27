@@ -1,0 +1,44 @@
+灯光决定着一个对象的阴影和它所转换的阴影
+关于灯光重要的属性：
+	type: 灯光的类型
+	Range: 灯光的范围：从中心到外围的距离（仅点灯和聚光灯可用）
+	Spot Angle: 聚光灯角度（仅聚光灯可用） 1 - 179
+	color: 灯光的颜色
+	mode: 定义灯光模式是否是通过烘焙的，可选值 
+		Realtime Mixed Baked
+	Intensity: 灯光的强度
+	Indirect Multiplier: 更改非直接灯光的强度，非直接灯光会从一个
+	对象跳到另外一个对象
+	Shadow Type: 阴影类型，确定灯光转化为硬阴影，软阴影或者没有阴影
+	Baked Shadow Angle: 如果类型为直线型灯光 阴影为软，并且模式可烘焙
+	则该属性会增加一些人为的柔软
+	Baked Shadow Radius 如果类型设置为点灯或聚光灯，且为软阴影，则这个
+	属性增加一些人为柔软度在阴影的边缘
+	Realtime Shadows 实时阴影，当阴影是软阴影或硬阴影的时候可用
+		Strength 控制阴影的黑色程度
+		Resolution 控制这个阴影贴图的渲染
+		Bias 控制阴影远离灯光的距离，0 - 2 (0.05 by default)
+		Normal Bias 
+	Cookie 为阴影定义一种纹理遮罩
+	Draw Halo 灯光的光晕，勾选后出现，也可通过Halo组件来实现
+	Flare 可以设置火焰在灯光的位置进行渲染，需要素材支持
+	Render Mode 设置灯光的优先权限
+		Important 以每像素进行渲染，一般用于使用引起注意的
+		虚拟效果，如车的头灯
+		Not Important 最快的渲染，顶点灯光模式
+	Culling Mask 可以排除收到灯光影响的对象
+
+Details
+可通过Cookie来在场景中创造独特的斑点
+Directional Light Shadows
+See documentation on directional light shadows for an in-depth explanation of how they work.
+Note that shadows are disabled for directional lights with cookies when forward rendering
+ is used. It is possible to write custom shaders to enable shadows in this case;
+ see documentation on writing surface shaders for further details.
+only does per-vertex lighting, giving a much higher throughput on low-end cards.
+
+提示：
+	1.聚光灯等和Cookie在创造从窗口照进来的灯光的效果是很有效的
+	2.低强度的点灯可以为一个场景创造深度（显得场景高度大）
+	3.为了获得最大的性能，使用VertexLit着色器。这个着色器只对每个顶点进行光照，
+	在低端卡片上提供更高的吞吐量。

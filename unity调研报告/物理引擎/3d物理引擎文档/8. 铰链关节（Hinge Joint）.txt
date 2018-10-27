@@ -1,0 +1,26 @@
+铰链关节
+详解：配置属性
+Connected Body 连接体（默认是 the world）
+Anchor 连接锚点
+Axis 连接的坐标轴
+Auto Configurable Connect 自动配置连接的锚点
+Use Spring 使用弹力到达相对连接体的一个角度
+	Spring 到达目的地的角度
+	Damper 降低速度的阻力
+	Target Position 指定弹力的角度，弹力将推向这个目标角度
+Use Motor 动量使对象旋转
+Motor 动量
+	Target Velocity 对象尝试获得的速度
+	Force 为了到达速度而应用的力
+	Free Spin 自由旋转，动量仅用来加速度，不用来刹车
+Use Limits 铰链限制的角度
+	min 旋转的最低角度
+	max 旋转的最高角度
+	Bounciness 对象碰到最大值或最小值多少次停止
+	Constant Distance 在接触距离范围内的极限接触将持续，以避免抖动
+
+提示：
+	1. Spring Motor 是互斥的，避免同时使用
+	2. Spring Motor Limits 属性可以微调关节的行为
+	3. 使用破坏力让场景可被破坏，让世界更加真实
+	4. 不需要讲关节指定连接一个对象，因为默认是世界，调节锚点和坐标轴即可

@@ -1,0 +1,8 @@
+恒力
+	Force 驱动力 相对世界
+	Relative Force 相对驱动力 相对自身
+	Torque 转矩 相对世界
+	Relative Torque 相对转矩 相对自身
+
+
+	使用场景：如岩石的滚动 

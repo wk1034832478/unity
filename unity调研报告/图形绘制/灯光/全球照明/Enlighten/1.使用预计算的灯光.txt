@@ -1,0 +1,18 @@
+1.使用precompute，要把对象设置为static，如果要使用Precomputed Realtime GI，Lightmap Static需要被勾选、
+2.设置预计算自动生成： 
+	Auto Generate (menu: Window > Rendering
+	 > Lighting Settings > Scene
+	 > Auto Generate
+3. 自动或手动预计算
+	当场景复杂的时候，避免使用预计算！
+	如果要重新计算和烘焙反射探针，则：menu: Window > Lighting Settings > Scene > Generate Lighting -> Bake Reflection Probes\
+4. unity会根据缓存大小情况来保存灯光数据，保存在Asset当中，超出则会删除，
+	为保证正确，所以构建游戏前去掉 Auto Generate
+5. 使用 Baked GI(Baked GI) 和 实时GI(Realtime GI)
+	可在Window > Lighting Settings > Scene中开启，但是当添加任何
+	关闭的灯光模式后，设置会被重写并激活
+6. GI cache (GI 缓存):
+	烘焙和预计算的数据会被缓存下来，存储工程外部，可以被清除，缓存的数量和内容由改变的次数决定
+	清除步骤：Preference > GI Cache > Clear Cache
+	也可以更改缓存位置，通过Cache Folder Location更改默认的缓存位置及缓存大小
+7. 

@@ -1,0 +1,15 @@
+直线型灯光阴影------视角混淆问题
+视角混淆问题：靠近照相机的阴影贴图像素看起来扩大了，变得矮胖和更远的相比
+使用软阴影和高像素可以解决，但是对硬件提出了更高的要求
+原因：不同区域的阴影贴图不均与地被摄像头的视野放缩了。
+最佳解决方案：使用阴影层叠（Quality => Shadows => Shadow Cascades），更多的层叠则效果更好
+
+
+阴影距离：物体超过设定的阴影距离后（相对camear），阴影不再进行渲染
+	（Quality => Shadows => Shadow Distance）
+
+可视化阴影参数调整（Visualising shadow parameter adjustments）
+	在scene view视野中使用 设置  draw mode 为 Shadow Cascades
+	可以使用不同的颜色表示层叠水平，使用这个可以获得阴影相关信息
+
+

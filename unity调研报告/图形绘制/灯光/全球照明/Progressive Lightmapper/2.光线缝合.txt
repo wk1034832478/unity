@@ -1,0 +1,2 @@
+光线缝合( Lightmap seam stitching)
+可以让硬边缘元更加的光滑

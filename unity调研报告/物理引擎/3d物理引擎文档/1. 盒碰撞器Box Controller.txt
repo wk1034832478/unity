@@ -1,0 +1,10 @@
+ºÐÅö×²Æ÷(Cube)£º
+Properties
+Property:	Function:
+Is Trigger	If enabled, this Collider
+ is used for triggering events, and is ignored by the physics engine
+.
+Material
+Reference to the Physics Material that determines how this Collider interacts with others.
+Center	The position of the Collider in the object¡¯s local space.
+Size	The size of the Collider in the X, Y, Z directions.

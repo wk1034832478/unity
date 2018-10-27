@@ -1,0 +1,24 @@
+每个lightmap
+包含一些图表。在运行时，Unity将这些图表映射到网格上
+，并使用图表的照明数据来计算最终的外观。由于GPU抽样的工作方式，
+如果一个图表的数据彼此太接近，就会从另一个图表中流出。
+这通常会导致意外的混叠、像素化和其他图形结果(这些被称为工件)。
+
+识别重叠
+1. 如果出现重叠现象，会从控制台打印出来相关信息
+2. 在scene view中使用 UV Overlap模式，红色高亮的部分是重叠的部分
+3. 使用Lighting中的Object Maps
+
+常用解决措施：
+Solutions
+There is no one single solution for UV overlap, because there are so many things that can cause it. Here are the most common solutions to consider:
+If Unity is automatically creating the lightmap UVs, you can increase the Pack Margin. To do this, navigate to the Model tab of the Mesh’s import settings.
+Make sure Generate Lightmap UVs is enabled, then fold out Advanced and use the Pack Margin slider to increase the value. This creates more spacing between charts,
+which reduces likelihood of overlap. However, this also increase the total space requirement for the lightmap, so try to apply enough spacing to avoid artifacts,
+but no more. For more information on lightmap UVs that Unity creates automatically, see documentation on Generating lightmapping UVs.
+If you provide lightmap UVs yourself, you can try adding margins using your modelling package.
+Increase the resolution of the entire lightmap. This will increase the numbers of pixels between the charts, and therefore reduce the likelihood of bleeding.
+The downside is that your lightmap may become too large. You can do this in the Lighting tab under Lightmapper Settings.
+Increase the resolution of a single GameObject. This allows you to increase lightmap resolution only for GameObjects that have overlapping UVs.
+Though less likely, this can also increase your lightmap size. You can change a GameObject’s lightmap resolution inside its Mesh Renderer
+ under Lightmap Settings.

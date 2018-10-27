@@ -1,0 +1,4 @@
+物理引擎调试可视化
+打开方式 Window > Analysis > Physics Debugger
+	enable Collision Geometry
+	enable Mouse Select

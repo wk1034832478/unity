@@ -1,0 +1,6 @@
+渐进式光照贴图
+使用方式：
+	1. 设置灯光的渲染模式为 Baked
+	2. Lighting 面板中设置 Ambient Mode 为 Baked
+	3. 启用 Baked Global Illumination 
+	4. Lightmapping Setting 中lightmapper设置为Progressive

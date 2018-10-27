@@ -1,0 +1,8 @@
+遮罩碰撞
+	通过建立在对象上的遮罩进行碰撞，对于碰撞更加的精确。遮罩碰撞需要标记为
+	Convex（凸面体）来和其它遮罩碰撞体进行碰撞，
+	则需要勾选 Kinematic，只能通过Transform对物体进行移动.
+	使用遮罩碰撞体，会更加地精确，但cpu消耗也是更多的，所以尽可能选择使用
+	primitive shape collision
+
+	对于有刚体的mesh collider，必须勾选 Convex

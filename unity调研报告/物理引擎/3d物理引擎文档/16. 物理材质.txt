@@ -1,0 +1,26 @@
+物理材质
+	调整碰撞物体的摩擦力和反弹的效果
+	使用步骤：
+		1. 创建物理材质：Assets > Create > Physic Material 
+		2. 使用在碰撞体上：将该物理材质拖拽到场景当中的碰撞体上
+	属性：
+		Dynamic Friction 动摩擦力
+		Static Friction 静摩擦力
+		Bounciness 表面的弹性，0，没有弹性，1的时候碰撞的时候不会损失任何的能量
+		Friction Combine 两个碰撞体摩擦力如何分摊
+			Average 平均分配
+			Minimum 使用两个摩擦力较小的那个
+			Maximum 使用两个摩擦力较大的那个
+			Multiply 摩擦力互乘
+		Bounce Combine 两个碰撞体的弹性的结合
+	a.结合摩擦力的优先权：
+		当两个物体的结合摩擦力不同时，两者的结合摩擦力按照优先顺序执行
+		eg:
+		The priority order is as follows:
+			Average < Minimum < Multiply < Maximum
+		假如一个是 Average 另一个用的是 Maximum，则两者共同使用的 摩擦力是
+		Maximum，即下拉框从上到下，优先权是越来越高
+	b. 当两个接触面大于一个点的时候 ，摩擦力会是真实世界的两倍，所以需要乘以一个
+	系数0.5
+	c. 同样的逻辑也可用于Bounciness，当设置Bounciness都为1(包括地面)的时候，从某一高度落下，反弹的
+	高度会高于原始高度（动量不是守恒的）

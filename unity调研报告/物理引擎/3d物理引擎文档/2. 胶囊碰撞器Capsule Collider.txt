@@ -1,0 +1,11 @@
+½ºÄÒÅö×²Æ÷
+Property:	Function:
+Is Trigger	If enabled, this Collider
+ is used for triggering events, and is ignored by the physics engine
+.
+Material
+Reference to the Physics Material that determines how this Collider interacts with others.
+Center	The position of the Collider in the object¡¯s local space.
+Radius	The radius of the Collider¡¯s local width.
+Height	The total height of the Collider.
+Direction	The axis of the capsule¡¯s lengthwise orientation in the object¡¯s local space.

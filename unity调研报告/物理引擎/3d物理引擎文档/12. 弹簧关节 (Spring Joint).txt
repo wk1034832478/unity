@@ -1,0 +1,20 @@
+弹簧关节
+	用于将两个刚体连接起来，在限定距离类可以任意改变它们的相对位置
+属性列表：
+	Connected Body 和该关节连接的刚体，默认为空间中一个固定的点
+	Anchor
+	Auto Configurable Connected Anchor
+	Connected Anchor
+	Spring 弹力的强度
+	Damper 当弹力激活时的阻力
+	Min Distance 没有弹力的最小距离
+	Max Distance 没有弹力的最大距离
+	Tolerance 容灾机制，距离剩余偏差
+	Break Force
+	Break Torque
+	Enable Collision
+	Enable Preprocessing 可以实现不可配置的
+
+	Spring 弹力的大小是根据单位距离设定的，实际弹力是 离开
+	设定的距离的绝对值 乘以 Spring(设定的参数)，得到实际的弹力
+	然后使用Damper来逐渐减小这个弹力的大小

@@ -1,0 +1,24 @@
+光照映射：unity当中预处理场景中表面亮度预计算的处理过程。
+untiy使用 Progressive Lightmapper 来烘焙光照贴图
+准备场景和烘焙光照贴图
+	1. Select Window > Lighting > Settings from the Unity Editor
+	menu to open the Lighting window. Make sure any Mesh you want
+	to apply a light map to has proper UVs for lightmapping.
+	The easiest way to do this is to open the Mesh import settings
+	and enable the Generate Lightmap UVs setting.
+	2. 控制贴图像素  Lightmapping Settings 中调整 Lightmap Resolution
+	的值
+	3. 生成光照映射的步骤
+		a. 在场景标签的底部，点击生成灯光或保证启用自动生成
+		b. 此时会底部出现进度条
+		c. 当完成时，可以在Lighting window当中的Global Maps
+		和Object Maps看到
+	4. 调整烘焙参数：
+		环境灯光( Environment Lighting )也可用于全局照明
+	5. 过滤
+		过滤可以让你使用模糊的效果，渐进光照映射提供两种过滤
+		a. 高斯模糊Gaussian
+		b. A-Trous 深黑色
+		当Filter使用Advanced 设置的时候，可以使用直接或间接地或
+		周围吸收的过滤
+		

@@ -1,0 +1,4 @@
+Global Illumination （全局照明）
+1. Precomputed Realtime GI 和 Baked GI
+	区别：预计算的在运行时还可以使用计算的数值
+	局限性：都只能使用在static的对象上
