@@ -1,0 +1,31 @@
+音频源
+在场景中播放音频剪辑，声音可以输出到音频聆听者或音频混合器当中。
+属性值:
+	Audio Clip  相关要播放的音频
+	Outout 声音输出的对象，Audio Listener 和 Audio Mixer
+	Mute 静音
+	Bypass Effects 是否不使用效果
+	Bypass Listener 是否关闭聆听者的听觉效果
+	Bypass ReverbZones 是否关闭回音区域
+	Play On waake 游戏对象唤醒的时候播放
+	Loop 循环播放
+	Priority 播放的有限权 0 - 256，0是最高权限
+	Volume 音量
+	Pitch 音频数据的交换速率 1是正常值，低于1放慢，高于1加快
+	Stereo Pan 设置2d立体声音的立体声作用域
+	Spatial Blend 空间混合器，设置音源上有多少3d引擎的效果
+	Reverb Zone Mix　设置向回音区域输出信号的多少，
+	3D Sound Setting 设置空间混合参数，设为1的时候，才可以使声音具有距离感
+	Doppler Level 定义多普勒效果
+	Spread Sets the spread angle to 3D stereo or multichannel sound in speaker space.
+	Min Distance	Within the MinDistance, the sound will stay at loudest possible. Outside MinDistance it will begin to attenuate. Increase the MinDistance of a sound to make it ‘louder’ in a 3d world, and decrease it to make it ‘quieter’ in a 3d world.
+	Max Distance	The distance where the sound stops attenuating at. Beyond this point it will stay at the volume it would be at MaxDistance units from the listener and will not attenuate any more.
+	Rolloff Mode 声音衰减速度
+		-Logarithmic 远离时，声音降的很快（有log曲线）
+		-Linear Rolloff 线性衰减
+		Custom Rolloff 自定义衰减曲线
+	创建音频源的步骤：
+		1. 导入音频文件
+		2. 创建一个空对象
+		3. 在空对象上添加 Audio Source 组件
+		4. 设置Audio Source的属性Audio Clip 指向导入的音频文件

@@ -1,0 +1,33 @@
+“Ù∆µ∏≈ ˆ 
+In real life, sounds are emitted by objects and heard by listeners. The 
+way a sound is perceived depends on a number of factors. A listener can tell 
+roughly which direction a sound is coming from and may also get some sense of 
+its distance from its loudness and quality. A fast-moving sound source (like a 
+falling bomb or a passing police car) will change in pitch as it moves as a 
+result of the Doppler Effect. Also, the surroundings will affect the way sound 
+is reflected, so a voice inside a cave will have an echo but the same voice in 
+the open air will not.
+
+Audio Sources and Listener Audio Sources and Listener To simulate the effects of 
+position, Unity requires sounds to originate from Audio Sources attached to 
+objects. The sounds emitted are then picked up by an Audio Listener attached to 
+another object, most often the main camera . Unity can then simulate the effects 
+of a source°Øs distance and position from the listener object and play them to 
+the user accordingly. The relative speed of the source and listener objects can 
+also be used to simulate the Doppler Effect for added realism.
+
+Unity can°Øt calculate echoes purely from scene geometry but you can simulate 
+them by adding Audio Filters to objects. For example, you could apply the Echo 
+filter to a sound that is supposed to be coming from inside a cave. In 
+situations where objects can move in and out of a place with a strong echo, you 
+can add a Reverb Zone to the scene. For example, your game might involve cars 
+driving through a tunnel. If you place a reverb zone inside the tunnel then the 
+cars°Ø engine sounds will start to echo as they enter and the echo will die down 
+as they emerge from the other side.
+
+The Unity Audio Mixer allows you to mix various audio sources, apply effects to 
+them, and perform mastering.
+
+The manual pages for Audio Source, Audio Listener, Audio Mixer, the audio 
+effects and Reverb Zones give more information about the many options and 
+parameters available for getting effects just right.

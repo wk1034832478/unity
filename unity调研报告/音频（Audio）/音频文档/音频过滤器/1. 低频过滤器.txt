@@ -1,0 +1,6 @@
+低频过滤器
+	可以设置一个频率，低于的通过，高于的不可通过
+	属性: 
+		1. Cutoff Frequency 低频界限
+		2. （Lowpass Resonance Q）short for Lowpass Resonance Quality Factor 低通谐振质量因数 低频共振 
+		减小该值，可以降低能量损失

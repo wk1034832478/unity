@@ -1,0 +1,4 @@
+使用动画事件：https://docs.unity3d.com/Manual/animeditor-AnimationEvents.html
+	在游戏的对象脚本上定义一个公共的方法，可以在动画执行的时候进行调用。
+	点击Animation Window左边的窗口，靠近右边有一个添加事件的按钮，添加的
+	时间是在当前帧进行添加的。

@@ -1,0 +1,2 @@
+变形过滤器（Distortion Filter）
+	通过修改 Distortion 来更改变形值(有点像干扰参数)

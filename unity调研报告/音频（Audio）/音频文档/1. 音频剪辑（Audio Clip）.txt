@@ -1,0 +1,29 @@
+音频剪辑
+	选项:
+		1. Force To Mono 使用单声道
+		2. Normalize 使在单声道混合处理时正常化
+		3. Load In Background 后台加载，不会堵塞主线程，在后台加载音频
+		4. Ambisonic 三维声音 使用场景是360度旋转的视频和VR
+	属性:	
+		Load Type
+			Decompress On Load 加载时解压
+			Compressed In Memory 在内存中解压
+			Streaming  不工作的时候解码
+		Compression Format 压缩格式
+			PCM 这个选项提供更高的质量在对于大文件，对于很短的声音
+			效果也是不错的
+			ADPCM 使用于杂音较多的场景，如战场，cpu使用率更低
+				对于上面的场景可能使更好的选择
+			Vorbis/MP3 文件更小，质量更低，适合中等文件长度
+			HEVAG 和ADPCM很相似
+		Sample Rate Setting(采样率设置)
+			Preserve Smaple Rate 原始采样率
+			OPtimize Sample Rate 优化采样率，采样频率更高
+			Override Smaple Rate 人工设置采样率(Professional)
+		Force To Mono 混合成单声道
+		Load In Background 后台加载
+		Preload Audio Data 场景加载前加载，否则第一次播放的时候加载
+		如： AudioSource.Play()/AudioSource.PlayOneShot(), 
+		AudioSource.LoadAudioData() 
+
+			

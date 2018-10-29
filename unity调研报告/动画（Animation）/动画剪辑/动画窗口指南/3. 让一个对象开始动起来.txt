@@ -1,0 +1,19 @@
+在unity当中，有两种模式可以用来增加关键帧
+	1. Record Mode: 无论是通过Animation Window中更改属性还是在场景中改变
+		游戏对象的属性，这些都会自动记录下来用来增加到关键帧当中。
+	2. Preview Mode: 预览模式，仅仅通过Animation Window当中更改属性时，会
+		自动将其加入到关键帧当中，当时通过场景当中更改属性的时候却不会记录下来。
+		该模式在 Record Mode 模式中是自动激活的。
+	每秒帧数的更改：窗口左边的Samples右边的输入框是每秒的帧数
+	当前帧：左边第一行按钮的右边的输入框指定当前的帧
+	3. 使用 Record Mode：
+		点击Record Mode按钮开始该模式
+		再次点击Record Mode按钮关闭该模式
+		当改变游戏对象属性的时候，对应的属性的属性值会记录在Animation的Curves
+		窗口当中。
+	4. 手动添加关键帧的三种方法
+		a. 在Inspector面板上的属性上右键点击添加关键帧
+		b. Animation window上点击Add Keyframe
+		c. 通过热键 K 或 Shift-K
+			热键K：添加一般的帧，用所有可动的属性
+			热键Shift-K：更改前帧，用所有可动且其它帧更改过的属性

@@ -1,0 +1,12 @@
+“Ù∆µ…Ë÷√£∫
+The AudioSettings class contains various bits of global information 
+relating to the sound system, but most importantly it contains API that allows 
+resetting the audio system at runtime in order to change settings such as 
+speaker mode, sample rate (if supported by the platform), DSP buffer size and 
+real/virtual voice counts.
+
+Many of these settings can also be configured in the Audio section of the 
+project settings . When changed these settings will apply both to the editor and 
+define the initial state of the game while changes performed using the 
+AudioSettings API only apply to the runtime of the game and are reset back to 
+the state defined in the project settings when stopping the game in the editor.

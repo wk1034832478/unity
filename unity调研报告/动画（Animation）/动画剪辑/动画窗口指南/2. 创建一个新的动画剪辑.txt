@@ -1,0 +1,11 @@
+创建一个新的动画剪辑：https://docs.unity3d.com/Manual/animeditor-CreatingANewAnimationClip.html
+	为了能够游戏对象动起来，这个对象需要加入Animator Component去绑定上它。这个动画
+	组件需要和一个Animator Controller相关联，它会依次关联一个或更多的动画剪辑
+	当使用动画视图开始作用在一个游戏对象上时，这些都会自动添加绑定上去。
+	
+	首先确保Animation Window已经打开 Window > Animation > Animation (Ctrl+6)
+	然后创建动画
+
+	具体使用见上方的链接
+
+	

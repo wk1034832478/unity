@@ -1,0 +1,8 @@
+Audio Listener
+仅用于补货场景中的声音，没有任何的属性，
+如果对象处于回声环境当中，要能听到响应的特殊效果，需要添加Audio Effects组件
+默认是被添加在主照相机上，声音最终传到电脑当中
+1. 每个场景仅仅只有listener最好
+2. 可通过音频管理器（Audio Manager）对全局的音频进行管理
+	Edit->Project Settings->Audio 
+3. 

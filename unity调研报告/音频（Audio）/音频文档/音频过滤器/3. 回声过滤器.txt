@@ -1,0 +1,10 @@
+回声过滤器
+	重复一个声音在指定的延迟之后，衰减一个重复数基于延迟率
+	属性：
+	Delay	Echo delay in ms. 10 to 5000. Default = 500.
+	延迟后响起
+	Decay Ratio	Echo decay per delay. 0 to 1. 1.0 = No decay, 0.0 = total decay (ie simple 1 line delay). Default = 0.5.L
+	
+	Wet Mix	Volume of echo signal to pass to output. 0.0 to 1.0. Default = 1.0.
+	Dry Mix
+	Volume of original signal to pass to output. 0.0 to 1.0. Default = 1.0.
